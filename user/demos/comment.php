@@ -24,32 +24,7 @@ $opp = mysqli_query($con, $sql);
 
 # Code ..... 
 
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-    $comment = Clean($_POST['comment']);
-
-    # Validate comment .... 
-    $errors = [];
-
-    if (!Validate($comment, 1)) {
-        $errors['comment'] = "Required Field";
-    }
-    $Message=[];
-    if (count($errors) > 0) {
-        $Message = $errors;
-    } else {
-        $user=$_SESSION['user']['id'];
-        $sql = "INSERT INTO `review`( `comment`,`article_id`,user_id) VALUES ('$comment',$id,$user)";
-        $op  = mysqli_query($con, $sql);
-        // if ($op) {
-        //     $Message = ['Message' => 'Raw Updated'];
-        // } else {
-        //     $Message = ['Message' => 'Error Try Again ' . mysqli_error($con)];
-        // }
-    }
-    # Set Session ...... 
-    $_SESSION['Message'] = $Message;
-}
 ?>
 <div class="content-wrapper" style="min-height: 163px;">
     <!-- Main content -->
@@ -138,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
                 <div class="card-body ">
 
-                    <form action="comment.php?id=<?php echo $cat['id']; ?>" method="post" enctype="multipart/form-data">
+                    <form action="add_comment.php?id=<?php echo $cat['id']; ?>" method="post" enctype="multipart/form-data">
 
                         <div class="form-group ">
                             <label for="exampleInputName">Comment</label>
