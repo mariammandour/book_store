@@ -4,15 +4,15 @@ admin can upload books ,articles ,and add descriptions, and the user can make or
 
 ## Tools:-
 Localhost\
-phpMyadmin\
+phpMyadmin
 
 ## Tech Description:-
 ### frontend:
-html,css,js,jquery,bootstrap,/
-AdminLTE/
+html,css,js,jquery,bootstrap,\
+AdminLTE
 ### backend:
-php/
-MY SQL/
-CRUD Functions/
+php\
+MY SQL\
+CRUD Functions
 
 ## link for website:-
