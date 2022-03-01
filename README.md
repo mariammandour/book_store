@@ -15,5 +15,7 @@ php\
 MY SQL\
 CRUD Functions
 
+## for hosting:-
+00webhost
 ## link for website:-
 https://onlinebookstore9.000webhostapp.com/
